@@ -12,9 +12,7 @@ class Pages extends BaseController
             'angka' => ['Satu', 'Dua ', 3, 4, 5,]
         ];
 
-        echo view('layout/header', $data);
-        echo view('pages/home');
-        echo view('layout/footer');
+        return view('pages/home', $data);
     }
 
     public function about()
@@ -22,8 +20,29 @@ class Pages extends BaseController
         $data = [
             'title' => 'About | Learn Ci'
         ];
-        echo view('layout/header', $data);
-        echo view('pages/about');
-        echo view('layout/footer');
+
+        return view('pages/about', $data);
+    }
+
+    public function contact()
+    {
+        $data = [
+            'title' => 'Contact | Learn Ci',
+            'alamat' => [
+                [
+                    'tipe' => 'Rumah',
+                    'alamat' => 'Jl. Abc 123',
+                    'kota' => 'Malang'
+                ],
+                [
+                    'tipe' => 'Kantor',
+                    'alamat' => "Jl. Xyz 123",
+                    'kota' => 'Surabaya'
+
+                ]
+            ]
+        ];
+
+        return view('pages/contact', $data);
     }
 }

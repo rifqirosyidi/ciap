@@ -14,13 +14,11 @@
 
 <body>
 
-    <nav>
-        <div class="nav-wrapper container">
-            <a href="#" class="brand-logo">Rief</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="<?= base_url('/'); ?>">Home</a></li>
-                <li><a href="<?= base_url('/pages/about'); ?>">About</a></li>
-                <li><a href="collapsible.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <?= $this->include('layout/navbar'); ?>
+    <?= $this->renderSection('content'); ?>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
