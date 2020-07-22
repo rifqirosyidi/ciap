@@ -31,17 +31,7 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
-$routes->get('/coba/home/', 'Coba::index');
-$routes->get('/coba/about/', 'Coba::about');
-$routes->get('/coba/(:any)', 'Coba::about/$1');
-
-$routes->get('/users/', 'Admin\Users::index');
-
-// Route Closures
-$routes->get('/function', function () {
-	echo "Return Function Direct";
-});
+$routes->get('/', 'Pages::index');
 
 /**
  * --------------------------------------------------------------------
